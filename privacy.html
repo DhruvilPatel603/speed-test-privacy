@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Network Meter — Speed Test & Monitor</title>
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-card: #131b2e;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent-cyan: #06b6d4;
+      --accent-purple: #a855f7;
+      --border-color: #2e3a59;
+      --radius: 12px;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-family);
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .effective-date {
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    li strong {
+      color: var(--text-primary);
+    }
+
+    .callout {
+      background: rgba(6, 182, 212, 0.08);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+      color: var(--text-primary);
+      font-size: 13.5px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Privacy Policy</h1>
+      <div class="effective-date">Network Meter — Speed Test & Monitor • Effective Date: October 4, 2026 (Version 1.0.1)</div>
+    </header>
+
+    <main>
+      <section>
+        <p><strong>Network Meter — Speed Test & Monitor</strong> is committed to protecting your privacy. This Privacy Policy explains how our extension operates, what data is processed, and how permissions are used.</p>
+        <div class="callout">
+          <p><strong>🔒 100% Local & Private Processing:</strong> All network speed calculations, traffic measurements, and history graphs are processed strictly on your local device inside your browser. No personal data, URLs, or browsing activity are ever collected or transmitted.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>1. Data Collection & Privacy Safeguards</h2>
+        <p>The extension strictly does <strong>NOT</strong>:</p>
+        <ul>
+          <li>Collect, track, store, or transmit your browsing history, web activity, or visited URLs.</li>
+          <li>Collect, inspect, or store personal credentials, form inputs, passwords, or cookies.</li>
+          <li>Use analytics trackers, third-party advertising scripts, or background telemetry SDKs.</li>
+          <li>Transmit any user data to external remote servers or analytics providers.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. Chrome Extension Permissions & Justifications</h2>
+        <p>The extension requests only the minimum Chrome permissions required for core functionality:</p>
+        <ul>
+          <li><strong><code>webRequest</code></strong>: Required to observe browser HTTP/HTTPS request lifecycle metadata (e.g. <code>Content-Length</code> headers and payload byte counts) to compute real-time download and upload throughput.</li>
+          <li><strong><code>scripting</code></strong>: Required to inject the content scripts (page traffic tracker and floating speed meter HUD) into existing open browser tabs upon installation or update, ensuring real-time speed tracking works immediately without requiring users to manually refresh their tabs.</li>
+          <li><strong><code>tabs</code></strong>: Required to display total open tab counts and filter network throughput strictly for the active tab when <em>Current Tab</em> scope is selected.</li>
+          <li><strong><code>storage</code> & <code>unlimitedStorage</code></strong>: Required to save user preferences locally (theme, speed units, floating meter options) and persist rolling 24-hour graph timeline snapshots locally on your computer.</li>
+          <li><strong><code>alarms</code></strong>: Used for background periodic timers to refresh toolbar badge text and persist session byte totals cleanly.</li>
+          <li><strong>Host Permissions (<code>&lt;all_urls&gt;</code>, <code>http://*/*</code>, <code>https://*/*</code>)</strong>: Required to calculate browser network throughput across websites and inject the optional <strong>Floating Speed Meter</strong> overlay directly on supported webpages when enabled by the user.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Active Speed Test Disclosures</h2>
+        <p>When the user explicitly initiates a test via the <strong>Speed Test</strong> tab:</p>
+        <ul>
+          <li>The extension queries public high-speed CORS CDN edge endpoints (Cloudflare CDN) to measure Latency (Ping), Jitter, Download Speed, and Upload Speed.</li>
+          <li>These test requests contain zero personal identifiers, zero cookies, and zero tracking data.</li>
+          <li>Server location metadata (e.g., Cloudflare data center IATA code) is detected during the test solely to display the connected test server region to the user.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Data Storage & User Control</h2>
+        <p>All user settings, cumulative session totals, and 24-hour graph snapshots are stored exclusively on your local device inside Chrome's <code>chrome.storage.local</code>.</p>
+        <ul>
+          <li>You can reset session counters and graph history at any time inside the extension popup dashboard.</li>
+          <li>Uninstalling the extension permanently deletes all stored extension data from your computer.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Policy Updates & Contact Information</h2>
+        <p>If you have any questions regarding this Privacy Policy or technical implementation details, please contact us via our official repository or support channel.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      &copy; 2026 Network Meter — Speed Test & Monitor. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
